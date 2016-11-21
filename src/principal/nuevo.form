@@ -78,7 +78,7 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="base" max="32767" attributes="0"/>
                   <Component id="altura" pref="113" max="32767" attributes="0"/>
-                  <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
+                  <Component id="total" alignment="0" max="32767" attributes="0"/>
                   <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
@@ -99,7 +99,7 @@
                   <Component id="altura" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" pref="25" max="-2" attributes="0"/>
+              <Component id="total" min="-2" pref="25" max="-2" attributes="0"/>
               <EmptySpace pref="45" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -147,7 +147,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="total">
       <Properties>
         <Property name="text" type="java.lang.String" value="Perimetro:"/>
       </Properties>

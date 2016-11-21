@@ -10,13 +10,17 @@ package principal;
  * @author yojan
  */
 public class base {
-    private int base;
+    private double base;
     
-    public int getBase(){
+    public base(){
+        
+    }
+    
+    public double getBase(){
         return base;
     }
     
-    public void setBase(int base){
+    public void setBase(double base){
         this.base=base;
     }
 }

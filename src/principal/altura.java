@@ -10,13 +10,17 @@ package principal;
  * @author yojan
  */
 public class altura {
-    private int altura;
+    private double altura;
     
-    public int getAltura(){
+    public altura(){
+        
+    }
+    
+    public double getAltura(){
         return altura;
     }
     
-    public void setAltura(int altura){
+    public void setAltura(double altura){
         this.altura=altura;
     }
 }

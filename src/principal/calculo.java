@@ -10,6 +10,25 @@ package principal;
  * @author yojan
  */
 public class calculo {
-    int hipotenusa, perimetro;
+    private double hipotenusa, perimetro;
     
+    public calculo(){
+        
+    }
+    
+    public double getHipotenusa(){
+        return hipotenusa;
+    }
+    
+    public void setHipotenusa(double hipotenusa){
+        this.hipotenusa=hipotenusa;
+    }
+    
+    public double getPerimetro(){
+        return perimetro;
+    }
+    
+    public void setPerimetro(double perimetro){
+        this.perimetro=perimetro;
+    }
 }
