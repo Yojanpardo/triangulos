@@ -5,6 +5,8 @@
  */
 package principal;
 
+import javax.swing.JOptionPane;
+import java.sql.*;
 /**
  *
  * @author yojan
@@ -150,14 +152,27 @@ public class nuevo extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        conexion con=new conexion();
+        Connection reg=con.conexion();
+        String sql;
         base b=new base();
         altura a=new altura();
         calculo c=new calculo();
-        b.setBase(Integer.parseInt(base.getText()));
+        b.setBase(Double.parseDouble(base.getText()));
         a.setAltura(Double.parseDouble(altura.getText()));
-        c.setHipotenusa((int) Math.sqrt(Math.pow(a.getAltura(), 2)+Math.pow(b.getBase(), 2)));
+        c.setHipotenusa(Math.sqrt(Math.pow(a.getAltura(), 2)+Math.pow(b.getBase(), 2)));
         c.setPerimetro(a.getAltura()+b.getBase()+c.getHipotenusa());
         total.setText("Perimetro="+c.getPerimetro());
+            sql="INSERT INTO triangulos(base,altura,hipotenusa,perimetro) VALUES(?,?,?,?)";        
+        try{
+            PreparedStatement stt=reg.prepareStatement(sql);
+            stt.setDouble(1, b.getBase());
+            stt.setDouble(2, a.getAltura());
+            stt.setDouble(3, c.getHipotenusa());
+            stt.setDouble(4, c.getPerimetro());
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "error al conectar con la base de datos\nPuedes seguir trabajando pero los datos no serán almacenados","Error fatal",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
